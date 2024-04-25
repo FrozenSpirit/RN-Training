@@ -1,4 +1,5 @@
-import {Alert, BackHandler, Image, StyleSheet, Text, View} from 'react-native';
+import 'react-native-gesture-handler';
+import {Alert, BackHandler, Image, StyleSheet, View} from 'react-native';
 import React, {useEffect} from 'react';
 import CounterScreen from './src/screens/counter/CounterScreen';
 import GridScreen from './src/screens/grid/GridScreen';
@@ -13,11 +14,11 @@ import WebViewScreen from './src/screens/webview/WebViewScreen';
 import ToDoScreen from './src/screens/toDoProject/toDo/ToDoScreen';
 import PincodeModal from './src/common/components/pincode/PincodeModal';
 import AsyncStorageTestScreen from './src/screens/asynctest/AsyncStorageTestScreen';
-// import Navigator from './src/router/stack_nav';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import BottomNavigator from './src/router/bottom_tab_stack';
 import StackNav from './src/router/stack_nav';
 import {NavigationContainer} from '@react-navigation/native';
+import DrawerNavigator from './src/router/drawer_nav';
 
 export default function App() {
   useEffect(() => {
@@ -55,10 +56,9 @@ export default function App() {
         {/* <PincodeModal /> */}
         {/* <AsyncStorageTestScreen /> */}
         {/* <ToDoScreen /> */}
-        {/* <Navigator /> */}
-        <BottomNavigator />
-        {/* <StackNavScreen /> */}
         {/* <StackNav /> */}
+        {/* <BottomNavigator /> */}
+        <DrawerNavigator />
       </View>
     </NavigationContainer>
   );

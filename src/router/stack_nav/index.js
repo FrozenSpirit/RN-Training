@@ -5,6 +5,8 @@ import CounterScreen from '../../screens/counter/CounterScreen';
 import PaginationScreen from '../../screens/pagination/PaginationScreen';
 import ToDoScreen from '../../screens/toDoProject/toDo/ToDoScreen';
 import Strings from '../../utils/constants/Strings';
+// import DrawerNavigator from '../drawer_nav';
+// import BottomNavigator from '../bottom_tab_stack';
 
 export default function StackNav() {
   const Stack = createStackNavigator();
@@ -20,9 +22,15 @@ export default function StackNav() {
         component={ToDoScreen}
       />
       <Stack.Screen
+        // options={{headerShown: false}}
         name={Strings.NAVIGATION_KEYS.paginationScreen}
         component={PaginationScreen}
       />
+      {/* <Stack.Screen
+        options={{headerShown: false}}
+        name={'BottomNav'}
+        component={BottomNavigator}
+      /> */}
     </Stack.Navigator>
   );
 }

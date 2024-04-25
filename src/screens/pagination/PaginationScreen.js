@@ -6,7 +6,6 @@ import {
   View,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../common/components/header/Header';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
