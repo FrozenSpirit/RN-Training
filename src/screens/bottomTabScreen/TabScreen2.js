@@ -8,7 +8,7 @@ import CreatePostScreen from '../navExampleScreens/CreatePostScreen';
 export default function TabScreen2() {
   const Stack = createStackNavigator();
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerLeft: false}}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
       <Stack.Screen name="CreatePostScreen" component={CreatePostScreen} />

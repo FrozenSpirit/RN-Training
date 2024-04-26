@@ -1,10 +1,9 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import TabScreen2 from '../../screens/bottomTabScreen/TabScreen2';
-import StackNav from '../stack_nav';
 import Icons from '../../assets/icons/Icon';
-import DrawerNavigator from '../drawer_nav';
+import ToDoScreen from '../../screens/toDoProject/toDo/ToDoScreen';
 
 export default function BottomNavigator() {
   const Tab = createBottomTabNavigator();
@@ -14,19 +13,19 @@ export default function BottomNavigator() {
         headerShown: false,
         tabBarActiveTintColor: '#FF3EA5',
         // tabBarInactiveTintColor: 'red',
-        tabBarActiveBackgroundColor: 'orange',
+        // tabBarActiveBackgroundColor: 'orange',
         tabBarHideOnKeyboard: true,
 
         tabBarStyle: {
           backgroundColor: '#DFF5FF',
-          height: 60,
+          height: 50,
         },
         tabBarLabelStyle: {fontSize: 16, fontWeight: '700'},
         // tabBarShowLabel: false,
       }}>
       <Tab.Screen
-        name="StackNav"
-        component={StackNav}
+        name="ToDoProject"
+        component={ToDoScreen}
         options={{
           tabBarIcon: () => {
             return (
@@ -35,17 +34,7 @@ export default function BottomNavigator() {
           },
         }}
       />
-      {/* <Tab.Screen
-        name="DrawerNav"
-        component={DrawerNavigator}
-        options={{
-          tabBarIcon: () => {
-            return (
-              <Icons type={'fa'} name={'star'} size={25} color={'#008DDA'} />
-            );
-          },
-        }}
-      /> */}
+
       <Tab.Screen
         name="DataStackNav"
         component={TabScreen2}
