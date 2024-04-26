@@ -13,6 +13,8 @@ import UserScreen from '../../screens/drawerExampleScreens/UserScreen';
 import SettingScreen from '../../screens/drawerExampleScreens/SettingScreen';
 import HomeScreen from '../../screens/drawerExampleScreens/HomeScreen';
 import SignInScreen from '../../screens/signin/SignInScreen';
+import ReduxExample from '../../screens/redux-example/reduxExample';
+import ReduxTaskList from '../../screens/redux-example/reduxTaskList';
 
 export default function StackNav() {
   const Stack = createStackNavigator();
@@ -41,6 +43,8 @@ export default function StackNav() {
       <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
       <Stack.Screen name="UserScreen" component={UserScreen} />
       <Stack.Screen name="SettingScreen" component={SettingScreen} />
+      <Stack.Screen name="ReduxExample" component={ReduxExample} />
+      <Stack.Screen name="ReduxTaskList" component={ReduxTaskList} />
       <Stack.Screen
         // options={{headerShown: false}}
         name="BottomNav"

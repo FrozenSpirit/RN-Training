@@ -19,6 +19,8 @@ import BottomNavigator from './src/router/bottom_tab_stack';
 import StackNav from './src/router/stack_nav';
 import {NavigationContainer} from '@react-navigation/native';
 import DrawerNavigator from './src/router/drawer_nav';
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store/store';
 
 export default function App() {
   useEffect(() => {
@@ -43,24 +45,26 @@ export default function App() {
   }, []);
 
   return (
-    <NavigationContainer>
-      <View style={styles.container}>
-        {/* <CounterScreen /> */}
-        {/* <ShapeScreen /> */}
-        {/* <RenderListScreen /> */}
-        {/* <GridScreen /> */}
-        {/* <PracticeScreen /> */}
-        {/* <PaginationScreen /> */}
-        {/* <KeyboardAwareScrollScreen /> */}
-        {/* <WebViewScreen /> */}
-        {/* <PincodeModal /> */}
-        {/* <AsyncStorageTestScreen /> */}
-        {/* <ToDoScreen /> */}
-        {/* <StackNav /> */}
-        {/* <BottomNavigator /> */}
-        <DrawerNavigator />
-      </View>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <View style={styles.container}>
+          {/* <CounterScreen /> */}
+          {/* <ShapeScreen /> */}
+          {/* <RenderListScreen /> */}
+          {/* <GridScreen /> */}
+          {/* <PracticeScreen /> */}
+          {/* <PaginationScreen /> */}
+          {/* <KeyboardAwareScrollScreen /> */}
+          {/* <WebViewScreen /> */}
+          {/* <PincodeModal /> */}
+          {/* <AsyncStorageTestScreen /> */}
+          {/* <ToDoScreen /> */}
+          {/* <StackNav /> */}
+          {/* <BottomNavigator /> */}
+          <DrawerNavigator />
+        </View>
+      </NavigationContainer>
+    </Provider>
   );
 }
 

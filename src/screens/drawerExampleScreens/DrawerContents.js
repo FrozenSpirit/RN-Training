@@ -31,6 +31,16 @@ const DrawerList = [
     label: 'Bottom Navigation',
     navigateTo: 'BottomNav',
   },
+  {
+    icon: {name: 'fighter-jet', color: 'lime'},
+    label: 'Redux Counter',
+    navigateTo: 'ReduxExample',
+  },
+  {
+    icon: {name: 'fighter-jet', color: 'orange'},
+    label: 'Redux TaskList ',
+    navigateTo: 'ReduxTaskList',
+  },
 ];
 
 const DrawerLayout = ({icon, label, navigateTo}) => {
